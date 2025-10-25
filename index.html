@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Solitaire</h1>
+            <button class="new-game-btn">New Game</button>
+        </div>
+
+        <div class="game-board">
+            <div class="top-section">
+                <div class="stock-waste">
+                    <div class="pile stock" id="stock">
+                        <div class="card-back"></div>
+                    </div>
+                    <div class="pile waste" id="waste"></div>
+                </div>
+                <div class="foundations" id="foundations">
+                    <div class="pile foundation" id="foundation-0" data-suit="hearts"></div>
+                    <div class="pile foundation" id="foundation-1" data-suit="diamonds"></div>
+                    <div class="pile foundation" id="foundation-2" data-suit="clubs"></div>
+                    <div class="pile foundation" id="foundation-3" data-suit="spades"></div>
+                </div>
+            </div>
+
+            <div class="tableaus" id="tableaus">
+                <div class="pile tableau" id="tableau-0"></div>
+                <div class="pile tableau" id="tableau-1"></div>
+                <div class="pile tableau" id="tableau-2"></div>
+                <div class="pile tableau" id="tableau-3"></div>
+                <div class="pile tableau" id="tableau-4"></div>
+                <div class="pile tableau" id="tableau-5"></div>
+                <div class="pile tableau" id="tableau-6"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+

@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #0d5c3f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.new-game-btn {
+    background: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.new-game-btn:active {
+    background-color: #f0f0f0;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stock-waste {
+    display: flex;
+    gap: 15px;
+    flex: 0 0 auto;
+}
+
+.foundations {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.tableaus {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.pile {
+    position: relative;
+    width: 80px;
+    min-height: 110px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pile.tableau {
+    min-height: 300px;
+}
+
+.card {
+    position: absolute;
+    width: 80px;
+    height: 110px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: box-shadow 0.1s;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+
+.card.dragging {
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+.card.red {
+    color: #e74c3c;
+}
+
+.card.black {
+    color: #000;
+}
+
+.card-back {
+    width: 80px;
+    height: 110px;
+    background: linear-gradient(135deg, #1a5bb8 0%, #103a7a 100%);
+    border-radius: 4px;
+    border: 1px solid #0d2a5a;
+    cursor: pointer;
+}
+
+.card-rank {
+    font-size: 12px;
+    line-height: 1;
+}
+
+.card-suit {
+    font-size: 24px;
+    line-height: 1;
+    margin: 4px 0;
+}
+
+.foundation {
+    border-style: dashed;
+}
+
+.stock {
+    cursor: pointer;
+}
+
+.stock:active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .tableaus {
+        gap: 10px;
+    }
+
+    .pile {
+        width: 70px;
+        min-height: 100px;
+    }
+
+    .pile.tableau {
+        min-height: 250px;
+    }
+
+    .card {
+        width: 70px;
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .card-back {
+        width: 70px;
+        height: 100px;
+    }
+
+    .card-suit {
+        font-size: 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+}
+
